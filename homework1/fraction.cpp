@@ -11,9 +11,8 @@ int NOD(uint32_t number1, uint32_t number2){
 
 
 fraction::fraction(int32_t n_num, uint32_t n_denum){
-    uint32_t number;
-    if (n_num < 0) number = n_num * -1;
-    else number = n_num;
+    if (n_denum == 0) throw "denum can not be zero";
+    uint32_t number = fabs(n_num);
     if (number > n_denum) number = NOD(number, n_denum);
     else number = NOD(n_denum, number);
     _num = n_num / (int32_t)number;
@@ -30,7 +29,7 @@ fraction::fraction(){
 
 
 fraction::fraction(double number){
-    int number1 = static_cast<int>(number), number2 = 0, lenght = 0, temp, count = 0;
+    int32_t number1 = fabs(number), number2 = 0, lenght = 0, temp, count = 0;
     if (number1 == 0) number1 = 1;
     double copy = number;
     while(1){//находим кол-во цифр после запятой
@@ -41,14 +40,25 @@ fraction::fraction(double number){
             if (count == 5) break;
             continue;
         }
-        else count = 0;
+        else{
+            lenght += count;
+            count = 0;
+        }
         lenght++;
+        if (lenght == 12) break;
     }
+
     for (int i = 0; i < lenght; i++){
         number *= 10;
         number2 = number2 * 10 + (int)(number) % 10;
     }
-    int num = number1 * pow(10, lenght) + number2;
-    uint32_t denom = pow(10, lenght);
-    fraction(num, denom);
+    uint32_t num = number1 * pow(10, lenght) + fabs(number2);
+    uint32_t denum = pow(10, lenght);
+    //fraction(num, denom);//почему не работает
+    int nod = 1;
+    if (num > denum) nod = NOD(num, denum);
+    else nod = NOD(denum, num);
+    if (number > 0) _num = num / nod;
+    else _num = (-1 * num) / nod;
+    _denum = denum / nod;
 } 

@@ -1,0 +1,8 @@
+[
+{
+  "directory": "C:/Users/User/Project/class/classwork2/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe  -std=c++17 -g -o CMakeFiles\\try.dir\\try.cpp.obj -c C:\\Users\\User\\Project\\class\\classwork2\\try.cpp",
+  "file": "C:\\Users\\User\\Project\\class\\classwork2\\try.cpp",
+  "output": "CMakeFiles\\try.dir\\try.cpp.obj"
+}
+]

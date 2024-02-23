@@ -55,7 +55,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "c:/Users/User/Project/class/build"
+			"value" : "c:/Users/User/Project/class/homework1/build"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -439,7 +439,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/Users/User/Project/class/build/CMakeFiles/pkgRedirects"
+			"value" : "C:/Users/User/Project/class/homework1/build/CMakeFiles/pkgRedirects"
 		},
 		{
 			"name" : "CMAKE_GENERATOR",
@@ -511,7 +511,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "C:/Users/User/Project/class"
+			"value" : "C:/Users/User/Project/class/homework1"
 		},
 		{
 			"name" : "CMAKE_INSTALL_PREFIX",
@@ -1159,7 +1159,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/Users/User/Project/class/build"
+			"value" : "C:/Users/User/Project/class/homework1/build"
 		},
 		{
 			"name" : "class_IS_TOP_LEVEL",
@@ -1183,7 +1183,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/Users/User/Project/class"
+			"value" : "C:/Users/User/Project/class/homework1"
 		}
 	],
 	"kind" : "cache",

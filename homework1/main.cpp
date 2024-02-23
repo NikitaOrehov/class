@@ -1,12 +1,21 @@
 #include <iostream>
 #include "fraction.h"
 
+using namespace std;
+
 int main(){
-    fraction object(-4, 16);
-    object.print();
+    int a, b;
+    cin>> a >> b;
+    try{
+        fraction object(a, b);
+        object.print();
+    }
+    catch(const char* message){
+        cout<<message<<endl;
+    }
     // fraction object2(); почему не работает
     // object2.print();
-    fraction object2(1.5);
+    fraction object2(-1.006);
     object2.print();
     
 

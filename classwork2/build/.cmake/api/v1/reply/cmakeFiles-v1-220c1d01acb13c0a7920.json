@@ -2,7 +2,7 @@
 	"inputs" : 
 	[
 		{
-			"path" : "CMakeLists.txt"
+			"path" : "CmakeLists.txt"
 		},
 		{
 			"isGenerated" : true,
@@ -110,8 +110,8 @@
 	"kind" : "cmakeFiles",
 	"paths" : 
 	{
-		"build" : "C:/Users/User/Project/class/build",
-		"source" : "C:/Users/User/Project/class"
+		"build" : "C:/Users/User/Project/class/classwork2/build",
+		"source" : "C:/Users/User/Project/class/classwork2"
 	},
 	"version" : 
 	{
