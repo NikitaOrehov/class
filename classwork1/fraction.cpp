@@ -1,4 +1,4 @@
-#include "Fraction.h"
+#include "fraction.h"
 
 void Fraction::Print(){
     //this -> //Помогает посмотреть какие есть поля класса
@@ -26,8 +26,11 @@ Fraction::Fraction(int32_t num,uint32_t denom){
 }
 
 
+
+
 //Копирование класса fract1->fract1_copy
 Fraction::Fraction(const Fraction& fraction){
     _num = fraction._num;
     _denom = fraction._denom;
+       std::cout<<"copy konstructor -> "<<this<<std::endl;;
 }

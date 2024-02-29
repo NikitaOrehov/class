@@ -52,7 +52,7 @@ fraction::fraction(double number){
         number *= 10;
         number2 = number2 * 10 + (int)(number) % 10;
     }
-    uint32_t num = number1 * pow(10, lenght) + fabs(number2);
+    int32_t num = number1 * pow(10, lenght) + fabs(number2);
     uint32_t denum = pow(10, lenght);
     //fraction(num, denom);//почему не работает
     int nod = 1;
