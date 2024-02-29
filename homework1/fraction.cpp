@@ -1,14 +1,19 @@
 #include "fraction.h"
 #include <cmath>
 
-int NOD(uint32_t number1, uint32_t number2){
+int fraction::NOD(uint32_t number1, uint32_t number2){
     int temp = number1 % number2, answer;
     if (temp == 0) return number2;
     answer = NOD(number2, temp);
     return answer;
 }
 
-
+void fraction::sel(int32_t num, uint32_t denom){
+    int number = num / (int)denom;
+    std::cout<<number;
+    int new_num = fabs(num) - fabs(number) * denom;
+    std::cout<<" "<<new_num<<"/"<<denom<<std::endl;
+}
 
 fraction::fraction(int32_t n_num, uint32_t n_denum){
     if (n_denum == 0) throw "denum can not be zero";
@@ -19,19 +24,13 @@ fraction::fraction(int32_t n_num, uint32_t n_denum){
     _denum = n_denum / number;
 }
 
-
-
 fraction::fraction(){
     _num = 1;
     _denum = 2;
 }
 
-
-
-fraction::fraction(double number){
-    int32_t number1 = fabs(number), number2 = 0, lenght = 0, temp, count = 0;
-    if (number1 == 0) number1 = 1;
-    double copy = number;
+int fraction::abc(double copy){
+    int temp, count= 0, lenght;
     while(1){//находим кол-во цифр после запятой
         temp = (int)(copy * 10) % 10;
         copy *= 10;
@@ -47,14 +46,21 @@ fraction::fraction(double number){
         lenght++;
         if (lenght == 12) break;
     }
+    return lenght;
 
+}
+
+fraction::fraction(double number){
+    int32_t number1 = fabs(number), number2 = 0, lenght;
+    double copy = number;
+    lenght = abc(copy);
     for (int i = 0; i < lenght; i++){
         number *= 10;
         number2 = number2 * 10 + (int)(number) % 10;
     }
-    int32_t num = number1 * pow(10, lenght) + fabs(number2);
+    int32_t num = fabs(number);
+    if (number != 0)  int32_t num = number1 * pow(10, lenght) + fabs(number2);
     uint32_t denum = pow(10, lenght);
-    //fraction(num, denom);//почему не работает
     int nod = 1;
     if (num > denum) nod = NOD(num, denum);
     else nod = NOD(denum, num);
