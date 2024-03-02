@@ -1,12 +1,13 @@
 # ninja log v5
-25	462	7304229617631965	CMakeFiles/try.dir/try.cpp.obj	eaf9118dfeee3bc8
-477	626	7304221423522464	try.exe	ba88afd28cf66da6
-11	149	7304229962799546	try.exe	ba88afd28cf66da6
-10	493	7304230300672619	CMakeFiles/try.dir/try.cpp.obj	eaf9118dfeee3bc8
-494	634	7304230302023246	try.exe	ba88afd28cf66da6
-30	446	7304230499410642	CMakeFiles/try.dir/try.cpp.obj	eaf9118dfeee3bc8
-447	586	7304230500727442	try.exe	ba88afd28cf66da6
-29	449	7304230746187532	CMakeFiles/try.dir/try.cpp.obj	eaf9118dfeee3bc8
-449	588	7304230747521038	try.exe	ba88afd28cf66da6
 10	612	7304231325448052	CMakeFiles/try.dir/try.cpp.obj	eaf9118dfeee3bc8
 615	767	7304231326993927	try.exe	ba88afd28cf66da6
+12	449	7304318282897522	CMakeFiles/try.dir/try.cpp.obj	eaf9118dfeee3bc8
+450	590	7304318284255359	try.exe	ba88afd28cf66da6
+7	467	7304318533502849	CMakeFiles/try.dir/try.cpp.obj	eaf9118dfeee3bc8
+468	612	7304318534898782	try.exe	ba88afd28cf66da6
+13	633	7304319276392483	CMakeFiles/try.dir/try.cpp.obj	eaf9118dfeee3bc8
+634	824	7304319278272637	try.exe	ba88afd28cf66da6
+29	448	7304319503271207	CMakeFiles/try.dir/try.cpp.obj	eaf9118dfeee3bc8
+448	583	7304319504571329	try.exe	ba88afd28cf66da6
+21	475	7304320920804619	CMakeFiles/try.dir/try.cpp.obj	eaf9118dfeee3bc8
+475	635	7304320922332671	try.exe	ba88afd28cf66da6

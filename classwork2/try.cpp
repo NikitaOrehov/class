@@ -1,6 +1,7 @@
 #include <iostream>
 
-auto divide(int a, int b){
+template<typename T>
+auto divide(T a, T b){
     if (b == 0) throw "Error";
     return (double)a / b;
 }

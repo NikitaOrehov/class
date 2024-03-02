@@ -11,7 +11,7 @@ int NOD(uint32_t number1, uint32_t number2){
 
 
 fraction::fraction(int32_t n_num, uint32_t n_denum){
-    if (n_denum == 0) throw "denum can not be zero";
+    if (n_denum == 0) throw "denum can not be zero ааааа";
     uint32_t number = fabs(n_num);
     if (number > n_denum) number = NOD(number, n_denum);
     else number = NOD(n_denum, number);
@@ -59,6 +59,6 @@ fraction::fraction(double number){
     if (num > denum) nod = NOD(num, denum);
     else nod = NOD(denum, num);
     if (number > 0) _num = num / nod;
-    else _num = (-1 * num) / nod;
+    else _num = (-1 * (int32_t)num) / nod;
     _denum = denum / nod;
 } 
