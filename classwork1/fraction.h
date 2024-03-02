@@ -42,4 +42,40 @@ public:
 
     //ДЗ2 сокращение дроби (через конструктор, а не сетр гетр)
     void Reduce();// 10/20 -> 1/2
+
+
+    //перегрузка операции сложения
+    Fraction operator+(const Fraction& fraction) const {
+        int32_t new_num = _num * fraction._denom + fraction._num * _denom;
+        uint32_t new_denum = fraction._denom * _denom;
+        return Fraction(new_num, new_denum);
+    }
+
+    Fraction operator-(const Fraction& fraction) const {
+        int32_t new_num = _num * fraction._denom - _denom * fraction._num;
+        uint32_t new_denom = _denom * fraction._denom;
+        return Fraction(new_num, new_denom);
+    }
+
+    Fraction operator*(const Fraction& fract) const {
+        int32_t new_num = _num * fract._num;
+        uint32_t new_denom = _denom * fract._denom;
+        return Fraction(new_num, new_denom);
+    }
+
+    Fraction operator/(const Fraction& fract) const {
+        int32_t new_num = _num * fract._denom;
+        uint32_t new_denom = _denom * fract._num;
+        return Fraction(new_num, new_denom);
+    }
+
+    Fraction& operator=(const Fraction& fract){
+        _num = fract._num;
+        _denom = fract._denom;
+        return *this;
+    }
+
+    ~Fraction(){
+        std::cout<<"Destructor -> "<<this<<std::endl;
+    }
 };

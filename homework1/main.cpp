@@ -14,9 +14,6 @@ int main(){
     }
     // fraction object2(); почему не работает
     // object2.print();
-    fraction object2(-1.006);
+    fraction object2(-1.65);
     object2.print();
-    
-
-
 }
