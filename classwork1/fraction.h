@@ -3,14 +3,12 @@
 #include <cstdint>
 class Fraction{
 private:
-
     int32_t _num; //Поля класса
     uint32_t _denom;
 
 public:
     Fraction(); //Конструктор по умолчанию
     Fraction(int32_t num, uint32_t denom); //Конструктор с параметрами
-
     Fraction(const Fraction& fraction);//Копирование класса
 
     //Геттеры
@@ -36,13 +34,6 @@ public:
     friend std::ostream& operator<<(std::ostream& os, const Fraction& tmp){ //принимает ссылку на поток вывода, конст ссылку на наш класс 
         os << tmp._num << "/" << tmp._denom << std::endl;
     }
-
-    //ДЗ определить конструктор следующего вида: 
-    Fraction(double realFract); //грубо говоря 0.5 -> 1/2
-
-    //ДЗ2 сокращение дроби (через конструктор, а не сетр гетр)
-    void Reduce();// 10/20 -> 1/2
-
 
     //перегрузка операции сложения
     Fraction operator+(const Fraction& fraction) const {
@@ -75,7 +66,50 @@ public:
         return *this;
     }
 
+    bool operator<(const Fraction& fract) const {
+        if (_num * (int32_t)fract._denom < fract._num * (int32_t)_denom) return true;
+        return false;
+    }
+
+    bool operator>(const Fraction& fract) const {
+        if (_num * (int32_t)fract._denom > fract._num * (int32_t)_denom) return true;
+        return false;
+    }
+
+    bool operator>=(const Fraction& fract) const {
+        if (_num * (int32_t)fract._denom >= fract._num * (int32_t)_denom) return true;
+        return false;
+    }
+
+    bool operator<=(const Fraction& fract) const {
+        if ((_num * static_cast<int32_t>(fract._denom)) <= (fract._num * (int32_t)_denom)) return true;
+        return false;
+    }
+
+    bool operator==(const Fraction& fract) const {
+        if (_num * static_cast<int32_t>(fract._denom) == fract._num * static_cast<int32_t>(_denom)) return true;
+        return false;
+    }
+
+    bool operator!=(const Fraction& fract) const {
+        if (_num * static_cast<int32_t>(fract._denom) != fract._num * static_cast<int32_t>(_denom)) return true;
+        return false;
+    }
+
+    Fraction operator^(int number) const {
+        int32_t num = 1;
+        int32_t denom = 1;
+        for (int i = 0; i < number; i++){
+            num *= _num;
+            denom *= _denom;
+        }
+        return Fraction(num, denom);
+    }
+
+    void operator~(){
+        _num *= 1;
+    }
+
     ~Fraction(){
-        std::cout<<"Destructor -> "<<this<<std::endl;
     }
 };
