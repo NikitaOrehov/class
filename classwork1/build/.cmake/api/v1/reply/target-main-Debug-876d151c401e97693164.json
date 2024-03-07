@@ -2,10 +2,7 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "main.exe"
-		},
-		{
-			"path" : "main.pdb"
+			"path" : "main"
 		}
 	],
 	"backtrace" : 1,
@@ -45,7 +42,8 @@
 			"sourceIndexes" : 
 			[
 				0,
-				1
+				1,
+				2
 			]
 		}
 	],
@@ -61,16 +59,12 @@
 			{
 				"fragment" : "",
 				"role" : "flags"
-			},
-			{
-				"fragment" : "-lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32",
-				"role" : "libraries"
 			}
 		],
 		"language" : "CXX"
 	},
 	"name" : "main",
-	"nameOnDisk" : "main.exe",
+	"nameOnDisk" : "main",
 	"paths" : 
 	{
 		"build" : ".",
@@ -83,7 +77,8 @@
 			"sourceIndexes" : 
 			[
 				0,
-				1
+				1,
+				2
 			]
 		}
 	],
@@ -99,6 +94,12 @@
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
 			"path" : "fraction.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "complex.cpp",
 			"sourceGroupIndex" : 0
 		}
 	],

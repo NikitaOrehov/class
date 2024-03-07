@@ -1,6 +1,9 @@
-CMakeFiles/main.dir/main.cpp.o: \
- /home/s23380409@unn.global/project/class/classwork1/main.cpp \
- /usr/include/stdc-predef.h /usr/include/c++/12/iostream \
+CMakeFiles/main.dir/complex.cpp.o: \
+ /home/s23380409@unn.global/project/class/classwork1/complex.cpp \
+ /usr/include/stdc-predef.h \
+ /home/s23380409@unn.global/project/class/classwork1/complex.h \
+ /home/s23380409@unn.global/project/class/classwork1/fraction.h \
+ /usr/include/c++/12/iostream \
  /usr/include/x86_64-linux-gnu/c++/12/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/12/bits/os_defines.h \
  /usr/include/features.h /usr/include/features-time64.h \
@@ -147,6 +150,4 @@ CMakeFiles/main.dir/main.cpp.o: \
  /usr/include/c++/12/bits/locale_facets.tcc \
  /usr/include/c++/12/bits/basic_ios.tcc \
  /usr/include/c++/12/bits/ostream.tcc /usr/include/c++/12/istream \
- /usr/include/c++/12/bits/istream.tcc \
- /home/s23380409@unn.global/project/class/classwork1/fraction.h \
- /home/s23380409@unn.global/project/class/classwork1/complex.h
+ /usr/include/c++/12/bits/istream.tcc

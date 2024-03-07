@@ -1,4 +1,5 @@
 //Это файл-хиддер
+#pragma once
 #include <iostream>
 #include <cstdint>
 class Fraction{
@@ -32,7 +33,8 @@ public:
 
     //Перегрузка операции вывода в консоль
     friend std::ostream& operator<<(std::ostream& os, const Fraction& tmp){ //принимает ссылку на поток вывода, конст ссылку на наш класс 
-        os << tmp._num << "/" << tmp._denom << std::endl;
+        os << tmp._num << "/" << tmp._denom;
+        return os;
     }
 
     //перегрузка операции сложения
@@ -40,6 +42,11 @@ public:
         int32_t new_num = _num * fraction._denom + fraction._num * _denom;
         uint32_t new_denum = fraction._denom * _denom;
         return Fraction(new_num, new_denum);
+    }
+
+    Fraction operator+(double number) const {
+        int res = _num  + number * _denom;
+        return Fraction(res, _denom);
     }
 
     Fraction operator-(const Fraction& fraction) const {
@@ -67,33 +74,27 @@ public:
     }
 
     bool operator<(const Fraction& fract) const {
-        if (_num * (int32_t)fract._denom < fract._num * (int32_t)_denom) return true;
-        return false;
+        return (_num * (int32_t)fract._denom < fract._num * (int32_t)_denom);
     }
 
     bool operator>(const Fraction& fract) const {
-        if (_num * (int32_t)fract._denom > fract._num * (int32_t)_denom) return true;
-        return false;
+        return (_num * (int32_t)fract._denom > fract._num * (int32_t)_denom);
     }
 
     bool operator>=(const Fraction& fract) const {
-        if (_num * (int32_t)fract._denom >= fract._num * (int32_t)_denom) return true;
-        return false;
+        return (_num * (int32_t)fract._denom >= fract._num * (int32_t)_denom);
     }
 
     bool operator<=(const Fraction& fract) const {
-        if ((_num * static_cast<int32_t>(fract._denom)) <= (fract._num * (int32_t)_denom)) return true;
-        return false;
+        return ((_num * static_cast<int32_t>(fract._denom)) <= (fract._num * (int32_t)_denom));
     }
 
     bool operator==(const Fraction& fract) const {
-        if (_num * static_cast<int32_t>(fract._denom) == fract._num * static_cast<int32_t>(_denom)) return true;
-        return false;
+        return (_num * static_cast<int32_t>(fract._denom) == fract._num * static_cast<int32_t>(_denom));
     }
 
     bool operator!=(const Fraction& fract) const {
-        if (_num * static_cast<int32_t>(fract._denom) != fract._num * static_cast<int32_t>(_denom)) return true;
-        return false;
+        return (_num * static_cast<int32_t>(fract._denom) != fract._num * static_cast<int32_t>(_denom));
     }
 
     Fraction operator^(int number) const {
@@ -107,21 +108,41 @@ public:
     }
 
     void operator~(){
-        _num *= 1;
+        _num *= -1;
     }
 
-    void operator++(){
+    Fraction operator++(){
         _num += _denom;
+        return *this;
     }
 
-    void operator--(){
+    Fraction operator--(){
         _num -= _denom;
+        return *this;
     }
 
-    void operator++(int fract){
+    Fraction operator++(int number){
+        Fraction copy = Fraction(_num, _denom);
+        _num += _denom;
+        return copy;
     }
 
+    Fraction operator--(int number){
+        Fraction copy = Fraction(_num, _denom);
+        _num -= _denom;
+        return copy;
+    }
 
+    operator double() const {
+        return static_cast<double>(_num) / _denom;
+    }
+
+    Fraction operator-(){
+        if (_num > 0){
+            _num = _num * -1;
+        }
+        return Fraction(_num, _denom);
+    }
 
     ~Fraction(){
     }

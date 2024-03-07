@@ -129,6 +129,30 @@ main/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/build
 .PHONY : main/fast
 
+complex.o: complex.cpp.o
+.PHONY : complex.o
+
+# target to build an object file
+complex.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/complex.cpp.o
+.PHONY : complex.cpp.o
+
+complex.i: complex.cpp.i
+.PHONY : complex.i
+
+# target to preprocess a source file
+complex.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/complex.cpp.i
+.PHONY : complex.cpp.i
+
+complex.s: complex.cpp.s
+.PHONY : complex.s
+
+# target to generate assembly for a file
+complex.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/complex.cpp.s
+.PHONY : complex.cpp.s
+
 fraction.o: fraction.cpp.o
 .PHONY : fraction.o
 
@@ -186,6 +210,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... main"
+	@echo "... complex.o"
+	@echo "... complex.i"
+	@echo "... complex.s"
 	@echo "... fraction.o"
 	@echo "... fraction.i"
 	@echo "... fraction.s"
