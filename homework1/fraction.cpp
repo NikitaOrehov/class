@@ -47,7 +47,6 @@ int fraction::abc(double copy){
         if (lenght == 12) break;
     }
     return lenght;
-
 }
 
 fraction::fraction(double number){
