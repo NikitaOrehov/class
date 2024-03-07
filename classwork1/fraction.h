@@ -110,6 +110,19 @@ public:
         _num *= 1;
     }
 
+    void operator++(){
+        _num += _denom;
+    }
+
+    void operator--(){
+        _num -= _denom;
+    }
+
+    void operator++(int fract){
+    }
+
+
+
     ~Fraction(){
     }
 };

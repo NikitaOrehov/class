@@ -8,7 +8,7 @@ int main(){
     // else std::cout<<"false";
     // Fraction res = fract1 ^ 2;
     // std::cout<<res<<std::endl;
-    ~fract1;
+    ++fract1;
     //дз > < <= >= != ^ ~ ++ --
     return 0;
 }
