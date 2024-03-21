@@ -11,6 +11,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/s23380409@unn.global/project/class/classwork1/complex.cpp" "CMakeFiles/main.dir/complex.cpp.o" "gcc" "CMakeFiles/main.dir/complex.cpp.o.d"
   "/home/s23380409@unn.global/project/class/classwork1/fraction.cpp" "CMakeFiles/main.dir/fraction.cpp.o" "gcc" "CMakeFiles/main.dir/fraction.cpp.o.d"
   "/home/s23380409@unn.global/project/class/classwork1/main.cpp" "CMakeFiles/main.dir/main.cpp.o" "gcc" "CMakeFiles/main.dir/main.cpp.o.d"
+  "/home/s23380409@unn.global/project/class/classwork1/square.cpp" "CMakeFiles/main.dir/square.cpp.o" "gcc" "CMakeFiles/main.dir/square.cpp.o.d"
   )
 
 # Targets to which this target links.

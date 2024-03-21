@@ -14,4 +14,5 @@ public:
     square(Fraction a, Fraction b, Fraction c);
     void root();
     void print();
+    void print_root();
 };

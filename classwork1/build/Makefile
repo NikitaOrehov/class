@@ -201,6 +201,30 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+square.o: square.cpp.o
+.PHONY : square.o
+
+# target to build an object file
+square.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/square.cpp.o
+.PHONY : square.cpp.o
+
+square.i: square.cpp.i
+.PHONY : square.i
+
+# target to preprocess a source file
+square.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/square.cpp.i
+.PHONY : square.cpp.i
+
+square.s: square.cpp.s
+.PHONY : square.s
+
+# target to generate assembly for a file
+square.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/square.cpp.s
+.PHONY : square.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -219,6 +243,9 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... square.o"
+	@echo "... square.i"
+	@echo "... square.s"
 .PHONY : help
 
 

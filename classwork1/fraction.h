@@ -129,8 +129,7 @@ public:
     }
 
     Fraction operator-(){
-        _num *= -1;
-        return Fraction(_num, _denom);
+        return Fraction(_num * -1, _denom);
     }
 
     Fraction operator++(){

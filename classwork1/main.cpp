@@ -9,10 +9,10 @@
 // }
 
 int main(){
-    Fraction a(12, 1);
-    Fraction b(6, 1);
-    Fraction c(-3, 1);
+    Fraction a(1, 1);
+    Fraction b(0, 1);
+    Fraction c(1, 1);
     square first(a, b, c);
-    first.print();
+    first.print_root();
     return 0;
 }

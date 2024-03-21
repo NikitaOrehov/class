@@ -27,3 +27,7 @@ Complex Complex::operator=(const Complex& number){
     return Complex(_re, _im);
 }
 
+bool Complex::operator==(const Complex& number) const {
+    return (_re == number._re) && (_im == number._im);
+}
+

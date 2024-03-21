@@ -22,7 +22,7 @@ void Fraction::sel(int32_t num, uint32_t denom){
 }
 
 int Fraction::abc(double copy){
-    int temp, count= 0, lenght;
+    int temp, count= 0, lenght = 1;
     while(1){//РЅР°С…РѕРґРёРј РєРѕР»-РІРѕ С†РёС„СЂ РїРѕСЃР»Рµ Р·Р°РїСЏС‚РѕР№
         temp = (int)(copy * 10) % 10;
         copy *= 10;
