@@ -61,6 +61,18 @@ build CMakeFiles/main.dir/fraction.cpp.obj: CXX_COMPILER__main_unscanned_Debug C
   OBJECT_DIR = CMakeFiles\main.dir
   OBJECT_FILE_DIR = CMakeFiles\main.dir
 
+build CMakeFiles/main.dir/complex.cpp.obj: CXX_COMPILER__main_unscanned_Debug C$:/Users/User/Project/class/classwork1/complex.cpp || cmake_object_order_depends_target_main
+  DEP_FILE = CMakeFiles\main.dir\complex.cpp.obj.d
+  FLAGS = -std=c++17 -g
+  OBJECT_DIR = CMakeFiles\main.dir
+  OBJECT_FILE_DIR = CMakeFiles\main.dir
+
+build CMakeFiles/main.dir/square.cpp.obj: CXX_COMPILER__main_unscanned_Debug C$:/Users/User/Project/class/classwork1/square.cpp || cmake_object_order_depends_target_main
+  DEP_FILE = CMakeFiles\main.dir\square.cpp.obj.d
+  FLAGS = -std=c++17 -g
+  OBJECT_DIR = CMakeFiles\main.dir
+  OBJECT_FILE_DIR = CMakeFiles\main.dir
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target main
@@ -69,7 +81,7 @@ build CMakeFiles/main.dir/fraction.cpp.obj: CXX_COMPILER__main_unscanned_Debug C
 #############################################
 # Link the executable main.exe
 
-build main.exe: CXX_EXECUTABLE_LINKER__main_Debug CMakeFiles/main.dir/main.cpp.obj CMakeFiles/main.dir/fraction.cpp.obj
+build main.exe: CXX_EXECUTABLE_LINKER__main_Debug CMakeFiles/main.dir/main.cpp.obj CMakeFiles/main.dir/fraction.cpp.obj CMakeFiles/main.dir/complex.cpp.obj CMakeFiles/main.dir/square.cpp.obj
   FLAGS = -std=c++17 -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\main.dir

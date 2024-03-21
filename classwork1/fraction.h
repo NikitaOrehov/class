@@ -6,8 +6,12 @@ class Fraction{
 private:
     int32_t _num; //Поля класса
     uint32_t _denom;
+    int NOD(uint32_t a, uint32_t b);
+    void sel(int32_t num, uint32_t denom);
+    int abc(double copy);
 
 public:
+    Fraction(double number);
     Fraction(); //Конструктор по умолчанию
     Fraction(int32_t num, uint32_t denom); //Конструктор с параметрами
     Fraction(const Fraction& fraction);//Копирование класса
@@ -28,11 +32,19 @@ public:
 
     void Print();//Метод, сигнатура тут, сам код в Fraction.cpp
     inline void PrintDouble(){
+        if (_num == 0){
+            std::cout <<_num<< std::endl;
+            return;
+        }
         std::cout << static_cast<double>(_num)/_denom << std::endl;
     }
 
     //Перегрузка операции вывода в консоль
     friend std::ostream& operator<<(std::ostream& os, const Fraction& tmp){ //принимает ссылку на поток вывода, конст ссылку на наш класс 
+        if (tmp._denom == 1){
+            os << tmp._num;
+            return os;
+        }
         os << tmp._num << "/" << tmp._denom;
         return os;
     }
@@ -61,6 +73,11 @@ public:
         return Fraction(new_num, new_denom);
     }
 
+    Fraction operator*(int number){
+        int32_t num = _num * number;
+        return Fraction(num, _denom);
+    }
+
     Fraction operator/(const Fraction& fract) const {
         int32_t new_num = _num * fract._denom;
         uint32_t new_denom = _denom * fract._num;
@@ -71,6 +88,10 @@ public:
         _num = fract._num;
         _denom = fract._denom;
         return *this;
+    }
+
+    bool operator>(int number) const {
+        return _num > number;
     }
 
     bool operator<(const Fraction& fract) const {
@@ -107,8 +128,9 @@ public:
         return Fraction(num, denom);
     }
 
-    void operator~(){
+    Fraction operator-(){
         _num *= -1;
+        return Fraction(_num, _denom);
     }
 
     Fraction operator++(){
@@ -133,16 +155,11 @@ public:
         return copy;
     }
 
-    operator double() const {
+    operator double() const {/////////////////////
         return static_cast<double>(_num) / _denom;
     }
 
-    Fraction operator-(){
-        if (_num > 0){
-            _num = _num * -1;
-        }
-        return Fraction(_num, _denom);
-    }
+    void reduction();
 
     ~Fraction(){
     }

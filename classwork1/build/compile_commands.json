@@ -1,17 +1,26 @@
 [
 {
-  "directory": "/home/s23380409@unn.global/project/class/classwork1/build",
-  "command": "/usr/bin/g++-12    -std=c++17 -g -o CMakeFiles/main.dir/main.cpp.o -c /home/s23380409@unn.global/project/class/classwork1/main.cpp",
-  "file": "/home/s23380409@unn.global/project/class/classwork1/main.cpp"
+  "directory": "C:/Users/User/Project/class/classwork1/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe  -std=c++17 -g -o CMakeFiles\\main.dir\\main.cpp.obj -c C:\\Users\\User\\Project\\class\\classwork1\\main.cpp",
+  "file": "C:\\Users\\User\\Project\\class\\classwork1\\main.cpp",
+  "output": "CMakeFiles\\main.dir\\main.cpp.obj"
 },
 {
-  "directory": "/home/s23380409@unn.global/project/class/classwork1/build",
-  "command": "/usr/bin/g++-12    -std=c++17 -g -o CMakeFiles/main.dir/fraction.cpp.o -c /home/s23380409@unn.global/project/class/classwork1/fraction.cpp",
-  "file": "/home/s23380409@unn.global/project/class/classwork1/fraction.cpp"
+  "directory": "C:/Users/User/Project/class/classwork1/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe  -std=c++17 -g -o CMakeFiles\\main.dir\\fraction.cpp.obj -c C:\\Users\\User\\Project\\class\\classwork1\\fraction.cpp",
+  "file": "C:\\Users\\User\\Project\\class\\classwork1\\fraction.cpp",
+  "output": "CMakeFiles\\main.dir\\fraction.cpp.obj"
 },
 {
-  "directory": "/home/s23380409@unn.global/project/class/classwork1/build",
-  "command": "/usr/bin/g++-12    -std=c++17 -g -o CMakeFiles/main.dir/complex.cpp.o -c /home/s23380409@unn.global/project/class/classwork1/complex.cpp",
-  "file": "/home/s23380409@unn.global/project/class/classwork1/complex.cpp"
+  "directory": "C:/Users/User/Project/class/classwork1/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe  -std=c++17 -g -o CMakeFiles\\main.dir\\complex.cpp.obj -c C:\\Users\\User\\Project\\class\\classwork1\\complex.cpp",
+  "file": "C:\\Users\\User\\Project\\class\\classwork1\\complex.cpp",
+  "output": "CMakeFiles\\main.dir\\complex.cpp.obj"
+},
+{
+  "directory": "C:/Users/User/Project/class/classwork1/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe  -std=c++17 -g -o CMakeFiles\\main.dir\\square.cpp.obj -c C:\\Users\\User\\Project\\class\\classwork1\\square.cpp",
+  "file": "C:\\Users\\User\\Project\\class\\classwork1\\square.cpp",
+  "output": "CMakeFiles\\main.dir\\square.cpp.obj"
 }
 ]
