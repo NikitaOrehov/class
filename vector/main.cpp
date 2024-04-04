@@ -2,11 +2,16 @@
 #include "vector.h"
 
 int main(){
-    double* array_for_vec2 = new double[10]{1, 2, 3, 4, 5, 6, 7, 8, 9};
-    Vector<int> vec1 = {1, 2, 3, 4, 5, 6, 7, 8, 9};
-    Vector<double> vec2 = Vector<double>(10, array_for_vec2);
+    int array1[3] = {1, 2, 3};
+    int array2[3] = {1, 2, 4};
+    Vector vec1 = Vector(3, array1);
+    Vector vec2 = Vector(3, array2);
+    Vector vec3 = vec1 + vec2;
+    Vector vec4 = vec1 - vec2;
     std::cout<<vec1<<std::endl;
-    std::cout<<vec2<<std::endl;
-    delete [] array_for_vec2;
+    vec1.PrintLenght();
+    std::cout<<vec1<<std::endl;
+    Vector vec5 = vec1.normal();
+    vec5.PrintLenght();
     return 0;
 }
