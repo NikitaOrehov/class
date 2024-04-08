@@ -1,19 +1,28 @@
-#include <iostream>
 #include "matrix.h"
 
 int main(){
-    int array1[3] = {1, 2, 3};
-    int array2[3] = {1, 2, 4};
-    Vector vec1 = Vector(3, array1);
-    Vector vec2 = Vector(3, array2);
-    Vector vec3 = vec1 + vec2;
-    std::cout<<vec1<<std::endl;
-    double* normal;
-    normal = vec1.GetNormalVector();
-    for (int i = 0; i < 3; i++){
-        std::cout<<normal[i]<<" ";
+    matrix matr1 = matrix<double>(4, 4, 1);
+    matr1.print_matrix();
+    for (int i = 0; i < 4; i++){
+        for (int j = 0; j < 4; j++){
+            if (j % 2){
+                matr1[i][j] = i;
+            }
+            else if (i % 2){
+                matr1[i][j] = j + i;
+            }
+            else{
+                matr1[i][j] = j - i;
+            }
+        }
     }
-    std::cout<<std::endl;
-    std::cout<<vec1.find_lenght()<<std::endl;
+    matr1[3][3] = 9;
+    matr1.print_matrix();
+    matrix matr2 = matr1.reverse_matrix();
+    matr2.print_matrix();
+    matrix<double> matr3 = matr1 * matr2;
+    matrix<double> matr4 = matr3 / matr1;
+    matr3.print_matrix();
+    matr4.print_matrix();
     return 0;
 }

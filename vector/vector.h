@@ -12,8 +12,8 @@ private:
 
 public:
     Vector(){
-        normal_array = new double[_size];
         _size = 10;
+        normal_array = new double[_size];
         _array = new T[_size];
     }
     Vector(size_t size, T* array): _size(size), _array(new T[size]){
@@ -147,6 +147,10 @@ public:
 
     void PrintLenght(){
         std::cout<<_lenght<<std::endl;
+    }
+
+    size_t GetSize(){
+        return _size;
     }
 
     ~Vector(){
