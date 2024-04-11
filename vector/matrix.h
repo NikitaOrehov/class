@@ -11,6 +11,7 @@ private:
 public:
     matrix() = delete;
     matrix(size_t rows, size_t cols, int i = 0){
+        std::cout<<"constryctor"<<std::endl;
         _size = rows;
         _vectors = new Vector<T>[rows];
         for (size_t i = 0; i < _size; i++){
@@ -29,6 +30,7 @@ public:
     }
 
     matrix(size_t rows){
+        std::cout<<"constryctor"<<std::endl;
         _size = rows;
         _vectors = new Vector<T>[rows];
         for (size_t i = 0; i < _size; i++){

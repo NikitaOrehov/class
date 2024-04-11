@@ -1,8 +1,7 @@
 [
 {
-  "directory": "C:/Users/User/Project/class/vector/build",
-  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe  -std=c++17 -g -o CMakeFiles\\main.dir\\main.cpp.obj -c C:\\Users\\User\\Project\\class\\vector\\main.cpp",
-  "file": "C:\\Users\\User\\Project\\class\\vector\\main.cpp",
-  "output": "CMakeFiles\\main.dir\\main.cpp.obj"
+  "directory": "/home/s23380409@unn.global/project/class/vector/build",
+  "command": "/usr/bin/g++-12    -std=c++17 -g -o CMakeFiles/main.dir/main.cpp.o -c /home/s23380409@unn.global/project/class/vector/main.cpp",
+  "file": "/home/s23380409@unn.global/project/class/vector/main.cpp"
 }
 ]

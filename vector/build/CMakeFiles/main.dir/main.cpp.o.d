@@ -1,6 +1,9 @@
 CMakeFiles/main.dir/main.cpp.o: \
  /home/s23380409@unn.global/project/class/vector/main.cpp \
- /usr/include/stdc-predef.h /usr/include/c++/12/iostream \
+ /usr/include/stdc-predef.h \
+ /home/s23380409@unn.global/project/class/vector/matrix.h \
+ /home/s23380409@unn.global/project/class/vector/vector.h \
+ /usr/include/c++/12/iostream \
  /usr/include/x86_64-linux-gnu/c++/12/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/12/bits/os_defines.h \
  /usr/include/features.h /usr/include/features-time64.h \
@@ -147,11 +150,8 @@ CMakeFiles/main.dir/main.cpp.o: \
  /usr/include/c++/12/bits/locale_facets.tcc \
  /usr/include/c++/12/bits/basic_ios.tcc \
  /usr/include/c++/12/bits/ostream.tcc /usr/include/c++/12/istream \
- /usr/include/c++/12/bits/istream.tcc \
- /home/s23380409@unn.global/project/class/vector/matrix.h \
- /home/s23380409@unn.global/project/class/vector/vector.h \
- /usr/include/c++/12/cmath /usr/include/math.h \
- /usr/include/x86_64-linux-gnu/bits/math-vector.h \
+ /usr/include/c++/12/bits/istream.tcc /usr/include/c++/12/cmath \
+ /usr/include/math.h /usr/include/x86_64-linux-gnu/bits/math-vector.h \
  /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h \
  /usr/include/x86_64-linux-gnu/bits/flt-eval-method.h \
  /usr/include/x86_64-linux-gnu/bits/fp-logb.h \
@@ -172,4 +172,15 @@ CMakeFiles/main.dir/main.cpp.o: \
  /usr/include/c++/12/tr1/modified_bessel_func.tcc \
  /usr/include/c++/12/tr1/poly_hermite.tcc \
  /usr/include/c++/12/tr1/poly_laguerre.tcc \
- /usr/include/c++/12/tr1/riemann_zeta.tcc
+ /usr/include/c++/12/tr1/riemann_zeta.tcc /usr/include/c++/12/random \
+ /usr/include/c++/12/bits/random.h /usr/include/c++/12/vector \
+ /usr/include/c++/12/bits/stl_uninitialized.h \
+ /usr/include/c++/12/bits/stl_vector.h \
+ /usr/include/c++/12/bits/stl_bvector.h \
+ /usr/include/c++/12/bits/vector.tcc \
+ /usr/include/c++/12/bits/uniform_int_dist.h \
+ /usr/include/x86_64-linux-gnu/c++/12/bits/opt_random.h \
+ /usr/include/c++/12/bits/random.tcc /usr/include/c++/12/numeric \
+ /usr/include/c++/12/bits/stl_numeric.h /usr/include/c++/12/bit \
+ /usr/include/c++/12/pstl/glue_numeric_defs.h \
+ /usr/include/c++/12/pstl/execution_defs.h
