@@ -6,5 +6,5 @@ CXX_DEFINES =
 
 CXX_INCLUDES = 
 
-CXX_FLAGS =  -std=c++17 -g
+CXX_FLAGS =  -std=c++17 -fsanitize=address -O3 -g
 

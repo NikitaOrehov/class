@@ -1,6 +1,7 @@
 #pragma once
 #include <iostream>
 #include <cmath>
+#include "matrix.h"
 
 template<typename T>
 class Vector{
@@ -132,7 +133,7 @@ public:
 
 
     Vector& operator=(const Vector& vec){
-        if (vec._size > _size){//<
+        if (vec._size > _size){
             delete [] _array;
             _array = new T[vec._size];
         }
@@ -153,11 +154,19 @@ public:
         return _size;
     }
 
+    Vector vectors_multiplicate(const Vector& vec) const {
+        size_t new_size = _size;
+        T* new_array = new T[_size];
+        new_array[0] = _array[1] * vec._array[2] - _array[2] * vec._array[1];
+        new_array[1] = _array[0] * vec._array[2] - _array[2] * vec._array[0];
+        new_array[2] = _array[0] * vec._array[1] - _array[1] * vec._array[0];
+        Vector new_vec = Vector(_size, new_array);
+        return new_vec;
+    }
+
     ~Vector(){
         delete [] _array;
         delete [] normal_array;
     }
 
-
-    //дз + - * нормализация и получение длины
 };

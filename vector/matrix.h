@@ -11,7 +11,6 @@ private:
 public:
     matrix() = delete;
     matrix(size_t rows, size_t cols, int i = 0){
-        std::cout<<"constryctor"<<std::endl;
         _size = rows;
         _vectors = new Vector<T>[rows];
         for (size_t i = 0; i < _size; i++){
@@ -30,12 +29,26 @@ public:
     }
 
     matrix(size_t rows){
-        std::cout<<"constryctor"<<std::endl;
         _size = rows;
         _vectors = new Vector<T>[rows];
         for (size_t i = 0; i < _size; i++){
             _vectors[i] = Vector<T>(rows);
         }
+    }
+
+    matrix(const matrix& matr){
+        int cols = matr._vectors[0].GetSize();
+        _size = matr._size;
+        _vectors = new Vector<T>[_size];
+        for (int i = 0; i < _size; i++){
+            _vectors[i] = Vector<T>(cols);
+        }
+        for (int i = 0; i < _size; i++){
+            for (int j = 0; j < cols; j++){
+                _vectors[i][j] = matr._vectors[i][j];
+            }
+        }
+
     }
 
     size_t GetSize(){
@@ -232,5 +245,10 @@ public:
         }
         return det;
     }
+
+    ~matrix(){
+        delete [] _vectors;
+    }
+
 
 };//перегрузить сложение, разность, умножение, деление. Нахождение обратной матрицы, определитель, транспонирование, рандомное заполнение элементов. Реализовать векторное определение векторов 

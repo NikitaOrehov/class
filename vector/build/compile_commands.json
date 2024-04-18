@@ -1,7 +1,7 @@
 [
 {
   "directory": "/home/s23380409@unn.global/project/class/vector/build",
-  "command": "/usr/bin/g++-12    -std=c++17 -g -o CMakeFiles/main.dir/main.cpp.o -c /home/s23380409@unn.global/project/class/vector/main.cpp",
+  "command": "/usr/bin/g++-12    -std=c++17 -fsanitize=address -O3 -g -o CMakeFiles/main.dir/main.cpp.o -c /home/s23380409@unn.global/project/class/vector/main.cpp",
   "file": "/home/s23380409@unn.global/project/class/vector/main.cpp"
 }
 ]

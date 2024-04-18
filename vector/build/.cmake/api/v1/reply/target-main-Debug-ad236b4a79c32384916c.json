@@ -35,7 +35,7 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : " -std=c++17 -g"
+					"fragment" : " -std=c++17 -fsanitize=address -O3 -g"
 				}
 			],
 			"language" : "CXX",
@@ -51,7 +51,7 @@
 		"commandFragments" : 
 		[
 			{
-				"fragment" : "-std=c++17 -g",
+				"fragment" : "-std=c++17 -fsanitize=address -O3 -g",
 				"role" : "flags"
 			},
 			{
